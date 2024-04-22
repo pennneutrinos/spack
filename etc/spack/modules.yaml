@@ -1,0 +1,16 @@
+modules:
+  default:
+    'enable:':
+    - lmod
+    lmod:
+      core_compilers:
+      - gcc@11.4.0
+      hash_length: 0
+      projections:
+        all: '{name}/{version}'
+      all:
+        environment:
+          set:
+            '{name}_ROOT': '{prefix}'
+            '{name}_VERSION': '{version}'
+
